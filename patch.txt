@@ -1,0 +1,3 @@
+cp data/devices.js node_modules/zigbee-herdsman-converters/devices.js
+cp data/homeassistant.js lib/extension/homeassistant.js
+cp data/fromZigbee.js node_modules/zigbee-herdsman-converters/converters/fromZigbee.js
