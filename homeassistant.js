@@ -253,6 +253,13 @@ const cfg = {
             value_template: '{{ value_json.gust }}',
         },
     },
+    'sensor_moisture': {
+        type: 'sensor',
+        object_id: 'moisture',
+        discovery_payload: {
+            value_template: '{{ value_json.moisture }}',
+        },
+    },
     'sensor_click': {
         type: 'sensor',
         object_id: 'click',
@@ -1763,7 +1770,8 @@ const mapping = {
     '067774': [cfg.sensor_action, cfg.sensor_battery],
     '067694': [cfg.sensor_action, cfg.sensor_battery],
     'zmweather': [cfg.sensor_battery, cfg.sensor_temperature, cfg.sensor_wind, cfg.sensor_gust],
-    'cb.relay8': [switchEndpoint('l1'), switchEndpoint('l2'), switchEndpoint('l3'), switchEndpoint('l4'), switchEndpoint('l5'), switchEndpoint('l6'), switchEndpoint('l7'), switchEndpoint('l8')]
+    'cb.relay8': [switchEndpoint('l1'), switchEndpoint('l2'), switchEndpoint('l3'), switchEndpoint('l4'), switchEndpoint('l5'), switchEndpoint('l6'), switchEndpoint('l7'), switchEndpoint('l8')],
+    'cb.moisture': [cfg.sensor_battery, cfg.sensor_temperature, cfg.sensor_moisture],
 };
 
 /**

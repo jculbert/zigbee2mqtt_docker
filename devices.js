@@ -11331,6 +11331,23 @@ const devices = [
             await bind(device.getEndpoint(9), coordinatorEndpoint, ['genOnOff']);
         },
     },
+
+    {
+        zigbeeModel: ['cb.moisture'],
+        model: 'cb.moisture',
+        vendor: 'Custom devices (DiY)',
+        description: 'Moisture Detector',
+        supports: 'Temperatue and Moisture',
+        fromZigbee: [fz.battery, fz.xiaomi_temperature, fz.culbee_moisture],
+        toZigbee: [],
+        meta: {configureKey: 1, multiEndpoint: false},
+        configure: async (device, coordinatorEndpoint) => {
+            var endpoint = device.getEndpoint(1);
+            await bind(endpoint, coordinatorEndpoint, [
+                'genPowerCfg', 'msTemperatureMeasurement', 'genAnalogInput'
+            ]);
+        },
+    },
     
 ];
 

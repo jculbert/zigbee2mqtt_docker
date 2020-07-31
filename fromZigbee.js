@@ -5372,6 +5372,15 @@ const converters = {
             }
         },
     },
+   culbee_moisture: {
+        cluster: 'genAnalogInput',
+        type: ['attributeReport', 'readResponse'],
+        convert: (model, msg, publish, options, meta) => {
+            if (msg.endpoint.ID == 1) {
+                return {moisture: msg.data['presentValue']};
+            }
+        },
+    },
 };
 
 module.exports = converters;
