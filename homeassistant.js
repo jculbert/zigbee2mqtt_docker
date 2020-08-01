@@ -257,6 +257,8 @@ const cfg = {
         type: 'sensor',
         object_id: 'moisture',
         discovery_payload: {
+            unit_of_measurement: 'mu',
+            device_class: 'humidity',
             value_template: '{{ value_json.moisture }}',
         },
     },
