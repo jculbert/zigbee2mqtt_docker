@@ -11349,6 +11349,22 @@ const devices = [
         },
     },
     
+    {
+        zigbeeModel: ['cb.motion'],
+        model: 'cb.motion',
+        vendor: 'Custom devices (DiY)',
+        description: 'Motion Detector',
+        supports: 'occupancy',
+        fromZigbee: [fz.battery, fz.tradfri_occupancy],
+        toZigbee: [],
+        meta: {configureKey: 1, multiEndpoint: false},
+        configure: async (device, coordinatorEndpoint) => {
+            var endpoint = device.getEndpoint(1);
+            await bind(endpoint, coordinatorEndpoint, [
+                'genPowerCfg', 'genOnOff'
+            ]);
+        },
+    },
 ];
 
 module.exports = devices.map((device) =>
