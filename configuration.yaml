@@ -1,0 +1,87 @@
+frontend:
+  port: 8124
+homeassistant: true
+permit_join: false
+advanced:
+  log_level: info
+  channel: 11
+  report: true
+  rtscts: false
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://macmini2
+serial:
+  port: /dev/zigbee
+external_converters:
+  - testlight.js
+  - panoccupancy.js
+  - exceloccupancy.js
+  - exceloccupancytemp.js
+  - contact.js
+  - garage_controller.js
+devices:
+  '0x0017880110504488':
+    friendly_name: Front
+  '0x001788011050428a':
+    friendly_name: Back
+  '0x00178801026b0a64':
+    friendly_name: Porch
+  '0x14b457fffe467959':
+    friendly_name: Kitchen 1
+  '0x14b457fffe4e26fb':
+    friendly_name: Kitchen 2
+  '0x001788010280859d':
+    friendly_name: Table
+  '0x001788010283ac4a':
+    friendly_name: Computer
+  '0x00124b00214f3c9a':
+    friendly_name: Local Weather
+  '0x00158d0004248b17':
+    friendly_name: aqara_switch1
+  '0x00124b00214f21c7':
+    friendly_name: relay1
+  '0x000d6ffffea6aa4b':
+    friendly_name: ikea_repeater_1
+  '0xd0cf5efffeea9a5b':
+    friendly_name: greatroom_window
+  '0x000d6ffffea6a511':
+    friendly_name: greatroom_window_remote
+  '0x90fd9ffffe3351a9':
+    friendly_name: living_room_lamp_one
+  '0x680ae2fffe948298':
+    friendly_name: Chair
+  '0x00124b0014f4c76a':
+    friendly_name: '0x00124b0014f4c76a'
+  '0x00124b00214f2304':
+    friendly_name: moisture_1
+  '0x14b457fffe467a29':
+    friendly_name: hall
+  '0x14b457fffe5bb97a':
+    friendly_name: hall_remote
+  '0x14b457fffe6c5694':
+    friendly_name: masterbath_remote
+  '0xccccccfffe4e79ca':
+    friendly_name: masterbath
+  '0x00124b00214f4b9e':
+    friendly_name: front_motion
+  '0x00158d0004210693':
+    friendly_name: cube_1
+    legacy: true
+  '0x50325ffffe1fa47f':
+    friendly_name: ikea_switch_4
+  '0xb4e3f9fffeb3236a':
+    friendly_name: ikea_light_6
+  '0x1c34f1fffede29d8':
+    friendly_name: TestLight
+  '0xa49e69fffefaaae2':
+    friendly_name: PanOccupancy
+  '0xa49e69fffefa6c19':
+    friendly_name: ExcelOccupancy1
+  '0xa49e69fffefa6c0e':
+    friendly_name: ExcelOccupancy2
+  '0xa49e69fffefa6c30':
+    friendly_name: Contact1
+  '0xa49e69fffefab2ff':
+    friendly_name: GarageController
+  '0x881a14fffe0410ed':
+    friendly_name: ikea_light_7
