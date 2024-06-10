@@ -85,3 +85,5 @@ devices:
     friendly_name: GarageController
   '0x881a14fffe0410ed':
     friendly_name: ikea_light_7
+  '0xf4b3b1fffebeb13f':
+    friendly_name: 'ikea_switch_5'
